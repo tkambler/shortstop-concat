@@ -16,9 +16,6 @@ function concat(configDir, handlers) {
     configDir = configDir || path.dirname(caller());
     handlers = handlers || {};
     let resolver = shortstop.create();
-    let resolve = Promise.promisify(resolver.resolve, {
-        'context': resolver
-    });
     for (let k in handlers) {
         resolver.use(k, handlers[k]);
     }
@@ -37,7 +34,11 @@ function concat(configDir, handlers) {
             .then(() => {
                 return Promise.resolve(res)
                     .map((row) => {
-                        return resolve(row);
+                        return new Promise((resolve, reject) => {
+                            return resolver.resolve(row, (err, data) => {
+                                return err ? reject(err) : resolve(data);
+                            });
+                        });
                     });
             })
             .then((res) => {

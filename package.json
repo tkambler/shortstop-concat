@@ -1,0 +1,18 @@
+{
+  "name": "shortstop-concat",
+  "version": "1.0.0",
+  "description": "Shortstop handler for concatenating multiple arrays (contained within specified files) into a single array.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Ambler <tkambler@gmail.com> (http://bitcubby.com)",
+  "license": "ISC",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/tkambler/shortstop-concat.git"
+  },
+  "keywords": [
+    "shortstop", "concat", "array"
+  ]
+}

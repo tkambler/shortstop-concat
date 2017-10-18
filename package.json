@@ -1,6 +1,6 @@
 {
   "name": "shortstop-concat",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shortstop handler for concatenating multiple arrays (contained within specified files) into a single array.",
   "main": "index.js",
   "scripts": {
@@ -8,11 +8,20 @@
   },
   "author": "Tim Ambler <tkambler@gmail.com> (http://bitcubby.com)",
   "license": "ISC",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/tkambler/shortstop-concat.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tkambler/shortstop-concat.git"
   },
   "keywords": [
-    "shortstop", "concat", "array"
-  ]
+    "shortstop",
+    "concat",
+    "array"
+  ],
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "caller": "^1.0.1",
+    "glob": "^7.1.2",
+    "shortstop": "^1.0.3",
+    "shush": "^1.0.0"
+  }
 }
